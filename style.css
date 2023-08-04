@@ -1,0 +1,537 @@
+:root{
+    --color-primary:#ab4f1e;
+    --color-primary-light:hsl(21, 79%, 19%);
+    --color-red:#f44d16;
+    --color-red-light:hsl(21, 78%, 28%);
+    --color-green:#00c476;
+    --color-green-light:rgba(223, 123, 36, 0.15);
+    --color-gray-900:#34282C;
+    --color-gray-700:#6d3c0b;
+    --color-gray-300:rgba(242,242,254,0.3);
+    --color-gray-200:rgba(242,242,254,0.7);
+    --color-white:#f2f2fe;
+    --color-bg:#04041e;
+    --border:#C19A6B;
+
+    --transition:all 1000ms ease;
+
+     /* big screen */
+    --container-width-lg:74%;
+
+
+    /* medium screen */
+    --container-width-md:88%;
+
+    --form-width:40%;
+    
+    --card-border-radius-1:0.3rem;
+    --card-border-radius-2:0.5rem;
+    --card-border-radius-3:0.8rem;
+    --card-border-radius-4:2rem;
+    --card-border-radius-5:5rem;
+
+
+}
+ /* ============================GENERAL=================================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    appearance: 0;
+    list-style: none;
+    text-decoration: none; 
+   
+}
+body{
+    /* font-family: 'Montserrat Subrayada', sans-serif; */
+    font-family: 'Montserrat Alternates', sans-serif;
+    line-height: 1.6;
+    color: var(--color-gray-200);
+    overflow-x: hidden;
+    background: var(--color-bg);
+    font-size: 0.9rem;
+}
+.container{
+    width: var(--container-width-lg);
+    max-width: 1800px;
+    margin-inline: auto;
+}
+section{
+    margin-top: 3rem;
+    width: 100vw;
+
+}
+h1,h2,h3,h4,h5{
+    color: var(--color-white);
+    line-height: 1.3; 
+}
+h1{
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+h2{
+    font-size: 1.7rem;
+    margin: 1rem 0;
+}
+h3{
+    font-size: 1.1rem;
+    margin: 0.8rem 0;
+}
+h4{
+    font-size: 1rem;  
+}
+a{
+    color: var(--color-white);
+    transition: var(--transition);
+    
+}
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+b{
+    font-size: 15px;
+    color:white;
+}
+b:hover{
+ background: #34282C;
+ padding: 1rem;
+ font-size: 12px;
+ border-radius: 20px;
+}
+/* ============================NAV BAR=================================== */
+nav{
+    background: var(--color-primary);
+    width: 100vw;
+    height: 4.5rem;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 1rem 1rem rgb(0, 0, 0,0.5);
+}
+nav button{
+display: none;
+}
+.nav__container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.avater{
+    width: 3.5rem;
+    /* height: 2.5rem; */
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 0.3rem solid var(--color-bg);
+}
+.nav__logo{
+    font-weight: 600;
+    font-size: 1.2rem; 
+}
+.nav__items{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.nav__profile{
+    position: relative;
+    cursor: pointer;
+}
+.nav__profile ul{
+    position: absolute;
+    /* top: 125%; */
+    top: 140%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3rem 3rem rgb(0, 0, 0,0.4);
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+
+ /* show nav ul when nav profile is hovered */
+.nav__profile:hover >ul{
+    visibility: visible;
+    opacity: 1;
+ }
+
+.nav__profile ul li a{
+padding: 1rem;
+background: var(--color-gray-900);
+display: block;
+width: 100%;
+
+}
+.nav__profile ul li:last-child a{
+ background: var(--color-red);
+ color: var(--color-white);
+}
+/* =================Nav ends here=================== */
+
+
+
+
+/* =================category nutton starts=================== */
+.category__button{
+    background: var(--color-gray-700);
+    color: var(--color-primary);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: var(--card-border-radius-2);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-align: center;
+}
+.category__button:hover{
+    color: var(--color-red);
+}
+/* ================= category nutton ends =================== */
+
+
+
+/* =================GENERAL POSTS starts=================== */
+.post__thumbnail{
+    /* border-radius: var(--card-border-radius-5) 0; */
+    border-radius:20px;
+    border: 0.2rem solid var(--border);
+    overflow: hidden;
+    margin-bottom: 1.6rem;
+}
+.post:hover .post__thumbnail img{
+    filter: saturate(0);
+    transition: filter 500ms ease;
+}
+.post__author{
+    display:flex;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+.post__author-avater{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--card-border-radius-3);
+    overflow: hidden;
+}
+/* added myself */
+.post__info{
+padding: 15px;
+margin-right: 20px;
+}
+/* =================GENERAL POSTS ends=================== */
+
+
+
+
+/* =============== ============   banner starts   ====================*/
+.card{
+    margin-top: 18rem;
+    /* background: rgba(238, 201, 142, 0.15); */
+    width:100%;
+    height: fit-content;
+    /* border-radius: 20px; */
+    /* margin-bottom: 18rem; */
+    margin-bottom: 10rem;
+     border-bottom:2px solid var(--color-gray-900);    
+}
+
+.card-h{
+    color:var(--form-width);
+    text-align: center;
+}
+.card-h:hover h1{
+   color: #f44d16;
+  
+   
+}
+/* ==================== banner ends ================================= */
+
+
+
+
+
+
+/* ================= FEATURED starts=================== */
+
+.featured{
+margin-top: 8rem;
+
+}
+.featured_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    /* myself added */
+     padding-left: 20px; 
+}
+.featured .post__thumbnail{
+    height: fit-content;
+    /* so that it fits the container */
+}
+/* ================= FEATURED ends=================== */
+
+
+
+/* =================POSTS starts=================== */
+
+.posts__container{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+/* will repeat 1fr 3 times */
+gap: 5rem;
+margin-bottom: 5rem;
+
+}
+
+/* =================POSTS ends=================== */
+
+
+
+
+/* =================Category buttons starts=================== */
+.category__buttons{
+    padding: 4rem 0;
+    border-top: 2px solid var(--color-gray-900);
+    border-bottom: 2px solid var(--color-gray-900);
+}
+.category__buttons-container{
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+/* =================Category buttons ends=================== */
+
+
+
+
+
+/* ================= Footer starts =================== */
+footer{
+   /* background: var(--color-gray-900); */
+   background: rgba(54, 38, 27, 0.749);
+   padding: 5rem 0 0;
+   box-shadow: inset 0 1.5rem 1.5rem rgb(0, 0, 0,0.3);
+}
+.footer__social{
+    margin-inline: auto;
+    width: fit-content;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.2rem;
+}
+.footer__social a{
+    background: var(--color-bg);
+    border-radius: 50%;
+    width: 2.3rem;
+    height: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer__social a:hover{
+    background: var(--color-red);
+    color: var(--color-bg);
+    
+}
+/* .footer__container{
+    
+     /* display: grid; 
+    gap: 25px 500px;
+     grid-template-columns: repeat(2,1fr);  
+} */
+footer h4{
+    color: var(--color-white);
+    margin-bottom: 0.6rem;
+}
+footer ul a{
+   opacity: 0.75;
+}
+footer ul a:hover{
+    letter-spacing: 0.2rem;
+    color: var(--color-red);
+ }
+ footer ul li{
+    padding: 0.4rem 0;
+ }
+.footer__copyright{
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 2px solid var(--color-bg);
+    margin-top: 4rem;
+}
+
+.contact{
+    font-size: 25px;
+    margin-bottom: 2rem;
+}
+.contact h5{
+    color: #C19A6B;
+}
+.contact h2{
+    color: #d97e0fe9;
+}
+.cat{
+    font-size: 25px;
+    margin-bottom: 2rem; 
+}
+.dead{
+    display: flex;
+}
+.part-one{
+    margin-top: 2rem;
+    width: 50%;
+    align-items: flex-start;
+    
+   
+}
+.part-two{
+    margin-top: 2rem;
+    margin-left: 10rem;
+    width: 50%;
+    align-items: flex-end;
+   
+  
+}
+.in1{
+    text-align: center;
+    border-radius: 5px;
+    background: #ab4f1e;
+    width: 300px;
+    height: 160px;
+}
+.in2{
+    text-align: center;
+    border-radius: 5px;
+    background: #ab4f1e;
+    width: 300px;
+    height: 40px;
+    
+}
+.in3{
+    text-align: center;
+    border-radius: 5px;
+    background: #ab4f1e;
+    width: 300px;
+    height: 40px;
+    margin-bottom: 1rem;
+}
+.submit{
+    background: #7e2603;
+    color: #C19A6B;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.part-two input:hover{
+    background: var(--color-gray-900);
+    color: #f44d16;
+}
+/* ================= Footer ends =================== */
+
+
+
+
+/* ================= IMAGE SLIDER SWIPER JS =================== */
+.about{
+    width: 100%;
+    height: 100vh;
+    /* background: var(--color-gray-900); */
+    background: rgba(242, 130, 55, 0.272);
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    margin-bottom: 12rem;
+    
+}
+.para{
+     width: 30%;
+    /* width: 100%; */
+    align-items: center;
+    text-align: center;
+    padding-left: 12rem;
+   
+}
+.swiper{
+    width: 70%; 
+    /* width: 100%; */
+    height: fit-content;
+}
+.swiper-slide img{
+    width: 100%;
+}
+.swiper .swiper-button-prev , .swiper .swiper-button-next{
+color: var(--color-primary);
+}
+.swiper .swiper-pagination-bullet-active{
+    background: var(--color-primary);   
+}
+/* ================= IMAGE SLIDER SWIPER JS =================== */
+
+/* join us btn  */
+.join-us{
+    width: 100%;
+   text-align: center;
+   margin-bottom: 220px;
+}
+.jbtn{
+    background: #800000;
+    color: var(--color-primary);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.join-us button:hover{
+    background: var(--color-primary);
+    color: antiquewhite;
+}
+
+
+/* join us btn */
+
+
+
+
+
+
+/* ================= RESPONSIVE media query tablet =================== */
+@media screen and (max-width: 1024px) {
+    /* general */
+  .container{
+    width: var(--container-width-md);
+  }
+ h2{
+    font-size: 1.6rem;
+ }
+ h3{
+    font-size: 1.2rem;
+ }
+ h5{
+    font-size: 0.8rem;
+ }
+ 
+/* nav */
+
+
+
+
+
+
+}
+/* ================= RESPONSIVE media query tablet =================== */
