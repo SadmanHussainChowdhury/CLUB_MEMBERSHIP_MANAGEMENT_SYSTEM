@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 60px;
+
+}
+b:hover{
+  background: #34282C;
+  padding: 1rem;
+  font-size: 12px;
+  border-radius: 20px;
+ }
+ .fc{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+   padding-bottom: 60px;
+   background: #04041e;
+ }
+ .fc form{
+   padding: 40px;
+   border-radius: 25px;
+   box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+   background:rgba(54, 38, 27, 0.749);
+   text-align: center;
+   width: 500px;
+
+ }
+ .fc form h3{
+   font-size: 30px;
+   text-transform: uppercase;
+   margin-bottom: 10px;
+   color: rgb(235, 138, 85);
+ }
+ .fc h1{
+  color: rgb(235, 138, 85);
+ }
+ .fc form input,.fc form select{
+   width: 100%;
+   padding: 10px 15px;
+   font-size: 17px;
+   margin: 8px 0;
+   /* background: #f44d169c; */
+   background: #ab4f1e;
+   border-radius: 29px;
+   color:rgb(250, 223, 210);
+ }
+ .fc form input::placeholder{
+    color:rgb(235, 138, 85);
+ }
+ .fc form select option{
+   background: #d24414;
+ }
+ .fc form .form-btn{
+    background: #d63a1775;
+   color:rgb(235, 138, 85);
+   text-transform: capitalize;
+   font-size: 20px;
+   cursor: pointer;
+ }
+ .fc form .form-btn:hover{
+   /* background: rgba(220, 117, 20, 0.963); */
+   background: #04041e;
+   color: #fff;
+ }
+ .fc form p{
+   margin-top: 10px;
+   font-size: 20px;
+   color: rgba(190, 117, 39, 0.574);
+ }
+ .fc form p a{
+   color: #f44d169c;
+ }
+ /* .fc form .error-msg{
+   margin: 10px 0;
+   display:block;
+   background: #ab4f1e;
+   color: #fff;
+   border-radius: 5px;
+   font-size: 20px;
+   padding: 10px;
+ } */
+ .pay{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  padding-bottom: 60px;
+  background: #04041e;
+ 
+
+ }
+ .pay h1{
+  color: rgb(235, 138, 85);
+ }
+.pay_btn{
+  width: 10%;
+  padding:15px;
+  margin-left: 0;
+  margin-top: 100px;
+  font-size: 17px;
+  background: #f6946332;
+  border-radius: 29px;
+  align-items: center;
+  text-align: center;
+  color: #d24414;
+ }
+a:hover{
+  background: #f35709bd;
+  color: antiquewhite;
+}

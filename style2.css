@@ -1,0 +1,828 @@
+:root{
+    --color-primary:#ab4f1e;
+    --color-primary-light:hsl(21, 79%, 19%);
+    --color-red:rgb(158, 16, 16);
+    --color-red-light:hsla(4, 78%, 49%, 0.433);
+    --color-green:#00c476;
+    --color-green-light:rgba(223, 123, 36, 0.15);
+    --color-gray-900:#34282C;
+    --color-gray-700:#6d3c0b;
+    --color-gray-300:rgba(242,242,254,0.3);
+    --color-gray-200:rgba(242,242,254,0.7);
+    --color-white:#f2f2fe;
+    --color-bg:#04041e;
+    --border:#C19A6B;
+    --danger:#f44d16;
+
+    --transition:all 1000ms ease;
+
+     /* big screen */
+    --container-width-lg:74%;
+
+
+    /* medium screen */
+    --container-width-md:88%;
+
+    --form-width:40%;
+    
+    --card-border-radius-1:0.3rem;
+    --card-border-radius-2:0.5rem;
+    --card-border-radius-3:0.8rem;
+    --card-border-radius-4:2rem;
+    --card-border-radius-5:5rem;
+
+
+}
+ /* ============================GENERAL=================================== */
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    appearance: 0;
+    list-style: none;
+    text-decoration: none; 
+    box-sizing: border-box;
+   
+}
+body{
+    font-family: 'Montserrat Alternates', sans-serif;
+    line-height: 1.6;
+    color: var(--color-gray-200);
+    overflow-x: hidden;
+    background: var(--color-bg);
+    font-size: 0.9rem;
+}
+.container{
+    width: var(--container-width-lg);
+    max-width: 1800px;
+    margin-inline: auto;
+}
+section{
+    margin-top: 3rem;
+    width: 100vw;
+
+}
+h1,h2,h3,h4,h5{
+    color: var(--color-white);
+    line-height: 1.3; 
+}
+h1{
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+h2{
+    font-size: 1.7rem;
+    margin: 1rem 0;
+}
+h3{
+    font-size: 1.1rem;
+    margin: 0.8rem 0;
+}
+h4{
+    font-size: 1rem;  
+}
+a{
+    color: var(--color-white);
+    transition: var(--transition);
+    
+}
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+b:hover{
+    background: #34282C;
+    padding: 1rem;
+    font-size: 12px;
+    border-radius: 20px;
+   }
+
+/* ============================NAV BAR=================================== */
+nav{
+    background: var(--color-primary);
+    width: 100vw;
+    height: 4.5rem;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 1rem 1rem rgb(0, 0, 0,0.5);
+}
+nav button{
+display: none;
+}
+.nav__container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.avater{
+    /* width: 3.5rem; */
+    width:60px;
+    /* height: 2.5rem; */
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 0.1rem solid var(--color-bg);
+}
+.nav__logo{
+    font-weight: 600;
+    font-size: 1.2rem; 
+}
+.nav__items{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.nav__profile{
+    position: relative;
+    cursor: pointer;
+}
+.nav__profile ul{
+    position: absolute;
+    top: 140%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3rem 3rem rgb(0, 0, 0,0.4);
+    visibility: hidden;
+    opacity: 0;
+    transition: var(--transition);
+}
+ /* show nav ul when nav profile is hovered */
+.nav__profile:hover >ul{
+    visibility: visible;
+    opacity: 1;
+ }
+
+.nav__profile ul li a{
+padding: 1rem;
+background: var(--color-gray-900);
+display: block;
+width: 100%;
+}
+.nav__profile ul li:last-child a{
+ background: var(--color-red);
+ color: var(--color-white);
+}
+/* =================Nav ends here=================== */
+
+
+
+/* =================category nutton starts=================== */
+.category__button{
+    background: var(--color-gray-700);
+    color: var(--color-primary);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: var(--card-border-radius-2);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-align: center;
+}
+.category__button:hover{
+    color: var(--color-red);
+}
+/* ================= category nutton ends =================== */
+
+
+
+
+
+/* =================GENERAL POSTS starts=================== */
+.post__thumbnail{
+    /* border-radius: var(--card-border-radius-5) 0; */
+    border-radius:20px;
+    border: 0.2rem solid var(--border);
+    overflow: hidden;
+    margin-bottom: 1.6rem;
+}
+.post:hover .post__thumbnail img{
+    filter: saturate(0);
+    transition: filter 500ms ease;
+}
+.post__author{
+    display:flex;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+.post__author-avater{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--card-border-radius-3);
+    overflow: hidden;
+}
+/* added myself */
+.post__info{
+padding: 15px;
+}
+/* =================GENERAL POSTS ends=================== */
+
+
+
+
+
+
+/* ================= FEATURED starts=================== */
+
+.featured{
+margin-top: 8rem;
+
+}
+.featured_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    /* myself added */
+     padding-left: 20px; 
+}
+.featured .post__thumbnail{
+    height: fit-content;
+    /* so that it fits the container */
+}
+/* ================= FEATURED ends=================== */
+
+
+
+
+
+
+
+/* =================POSTS starts=================== */
+
+.posts__container{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+/* will repeat 1fr 3 times */
+gap: 5rem;
+margin-bottom: 5rem;
+
+}
+
+/* =================POSTS ends=================== */
+
+
+
+
+
+/* =================Category buttons starts=================== */
+.category__buttons{
+    padding: 4rem 0;
+    border-top: 2px solid var(--color-gray-900);
+    border-bottom: 2px solid var(--color-gray-900);
+}
+.category__buttons-container{
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+}
+/* =================Category buttons ends=================== */
+
+
+
+
+
+
+
+/* ================= Footer starts =================== */
+footer{
+   background: var(--color-gray-900);
+   padding: 5rem 0 0;
+   box-shadow: inset 0 1.5rem 1.5rem rgb(0, 0, 0,0.3);
+}
+.footer__social{
+    margin-inline: auto;
+    width: fit-content;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.2rem;
+}
+.footer__social a{
+    background: var(--color-bg);
+    border-radius: 50%;
+    width: 2.3rem;
+    height: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer__social a:hover{
+    background: var(--color-red);
+    color: var(--color-bg);
+    
+}
+.footer__container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+footer h4{
+    color: var(--color-white);
+    margin-bottom: 0.6rem;
+}
+footer ul a{
+   opacity: 0.75;
+}
+footer ul a:hover{
+    letter-spacing: 0.2rem;
+    color: var(--color-red);
+ }
+ footer ul li{
+    padding: 0.4rem 0;
+ }
+.footer__copyright{
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 2px solid var(--color-bg);
+    margin-top: 4rem;
+}
+/* ================= Footer ends =================== */
+
+
+
+/* ==================================== SEARCH starts =================== */
+.search__bar{
+    margin-top: 7rem;
+}
+.search__bar-container{
+    position: relative;
+    width: 30rem;
+    background: var(--color-gray-900);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0.6rem 1rem;
+    border-radius: var(--card-border-radius-2);
+    color: var(--color-gray-300);
+}
+.search__bar-container > div{
+ width: 100%;
+ display: flex;
+ align-items: center;
+
+}
+.search__bar input{
+    background: transparent;
+    margin-left: 0.7rem;
+    padding: 0.5rem 0;
+    width: 100%;
+
+}
+.search__bar input::placeholder{
+    color: var(--color-gray-300);
+}
+
+
+/* ========== BUTTON STYLE STARTS=============== */
+.btn{
+    display: inline-block;
+    width: fit-content;padding: 0.6rem 1.2rem;
+    background: var(--color-primary);
+    border-radius: var(--card-border-radius-2);
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--color-white);
+    /* margin-left: 2rem; */
+}
+/* ========== BUTTON STYLE ENDS =============== */
+
+
+/* ============================ SEARCH ends =================== */
+
+
+
+
+
+
+
+
+
+
+/* ========== single posts STYLE starts =============== */
+.singlepost{
+    margin: 6rem 0 2rem;
+}
+.singlepost__container{
+    width: var(--form-width);
+    background: var(--color-gray-900);
+    padding: 1rem 2rem 3rem;
+}
+.singlepost__container p{
+    margin-top: 1rem;
+    line-height: 1.7rem;
+}
+.singlepost .singlepost__thumbnail{
+margin: 1.5rem 0 1rem;
+}
+/* ========== single posts STYLE ENDS =============== */
+
+/* ======= CATEGORY TITLE ============= */
+.category__title{
+    height: 15rem;
+    margin-top: 4.5rem;
+    background: var(--color-gray-900);
+    display: grid;
+    place-items: center;
+}
+/* ======= CATEGORY TITLE ============= */
+
+/* ======== Empty Page starts ============ */
+.empty__page{
+    height: 70vh;
+    /* text-align: center; */
+    display: grid;
+    place-items: center;
+}
+/* ======== Empty Page ends ============ */
+
+/* ========= sign in  starts ============= */
+.form__section{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.form__section-container{
+    width: var(--form-width);
+
+}
+.alert__message{
+    /* background: red; */
+    padding: 0.8rem 1.4rem;
+    margin-bottom: 1rem;
+    border-radius: var(--card-border-radius-2);
+}
+.error{
+    background: black;
+    color: red;
+}
+.success{
+    background: var(--color-green-light);
+    color: var(--color-green);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+} 
+.form__control{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+input,textarea,select{
+    padding: 0.8rem 1.4rem;
+    background: var(--color-gray-900);
+    border-radius: var(--card-border-radius-2);
+    resize: none;
+    color: var(--color-white);
+}
+.form__section small{
+    margin-top: 1rem;
+    display: block;
+}
+.form__section small a{
+    color: var(--color-primary);
+}
+.form__control.inline{
+    flex-direction: row;
+    align-items: center;
+}
+/* ========= sign in  ends ============= */
+
+/* ========Dashb==== sm btn edit ========= */
+.btn.sm{
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+}
+
+.stn{
+    display: inline-block;
+    width: fit-content;padding: 0.6rem 1.2rem;
+    border-radius: var(--card-border-radius-2);
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--color-white);
+    /* margin-left: 2rem; */
+}
+.stn.s1{
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+    background: green; 
+}
+.stn.s2{
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+    background: rgb(107, 12, 12); 
+}
+.msg{
+    background: #C19A6B;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.btn.danger{
+    background: var(--color-red);
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn:hover{
+    background: var(--color-white);
+    color: var(--color-bg);
+}
+/* ========Dash ==== sm btn edit ========= */
+/* ========================DASH BOARD */
+.dashboard{
+    margin-top: 6rem;
+}
+.sidebar__toggle{
+    display: none;
+}
+.dashboard__container{
+    display: grid;
+    /* grid-template-columns: 14rem auto; */
+    grid-template-columns: 10rem auto;
+    gap: 1rem;
+    background: var(--color-gray-900);
+    padding: 2rem;
+    margin-bottom: 5rem;
+}
+.dashboard aside a{
+ background: var(--color-primary);
+ display: flex;
+ gap: 1rem;
+ align-items: center;
+ padding: 1.6rem;
+}
+.dashboard aside ul li:not(:last-child) a{
+border-bottom: 1px solid var(--color-gray-900);
+}
+.dashboard aside a:hover{
+background: var(--color-gray-700);
+}
+.dashboard aside a.active{
+    background: var(--color-gray-900);
+}
+.dashboard main{
+    /* margin-left: 1.5rem; */
+    margin-left: 1rem;
+}
+.dashboard main h2{
+    margin: 0 0 2rem 0;
+    line-height: 1;
+}
+.dashboard main table{
+   width: 100%;
+   text-align: left;
+}
+.dashboard main table th{
+    background: var(--color-gray-700);
+    padding: 0.8rem;
+    color: var(--color-white);
+}
+.dashboard main table td{
+padding: 0.8rem;
+border-bottom: 1px solid gray;
+}
+.dashboard main table tr:hover td{
+    background: var(--color-bg);
+    color: var(--color-white);
+    cursor: default;
+    transition: var(--transition);
+}
+
+/* ========================DASH BOARD */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= RESPONSIVE media query tablet  midium devices=================== */
+
+@media screen and (max-width: 1024px) {
+    /* general */
+  .container{
+    width: var(--container-width-md);
+  }
+ h2{
+    font-size: 1.6rem;
+ }
+ h3{
+    font-size: 1.2rem;
+ }
+ h5{
+    font-size: 0.8rem;
+ }
+
+/* nav */
+nav button {
+    display: inline-block;
+    font-size: 1.5rem;
+    background: transparent;
+    color: var(--color-white);
+    cursor: pointer;
+
+} 
+nav button#close__nav-btn{
+ display: none;
+}
+.nav__container{
+    position: relative;
+}
+.nav__items{
+    position: absolute;
+    flex-direction: column;
+    top: 100%;
+    right: 0;
+    width: 12rem;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    display: none;
+}
+.nav__items li{
+    width: 100%;
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    box-shadow: -2rem 3rem 7rem rgba(0, 0, 0, 0.7);
+    background: var(--color-gray-900);
+    border-top: 1px solid var(--color-bg);
+    animation: animateDropdown 400ms 0s ease forwards;
+    /* delay 0 sec */
+    opacity: 0;
+    transform-origin: top;
+}
+.nav__items li:nth-child(2){
+    animation-delay: 200ms;
+}
+.nav__items li:nth-child(3){
+    animation-delay: 400ms;
+}
+.nav__items li:nth-child(4){
+    animation-delay: 600ms;
+}
+.nav__items li:nth-child(5){
+    animation-delay: 800ms;
+}
+
+/* nav dropdown animation */
+@keyframes animateDropdown {
+    0%{
+        transform: rotatex(90deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+}
+
+
+.nav__items li a{
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-gray-900);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+}
+.nav__profile{
+    background: var(--color-gray-900);
+}
+.nav__profile ul{
+    top: 100%;
+    width: 100%;
+}
+.nav__profile .avater{
+    margin-left: 2rem;
+    border: 0;
+}
+/* //////////////////////FEATURES */
+.featured_container{
+    gap: 3rem;
+}
+/* //////////////////////post */
+.posts__container{
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+/* ============= FOOTER */
+.footer__container{
+    grid-template-columns: 1fr 1fr;
+}
+ /*==================== blog page starts ======================= */
+
+/* search btn */
+.search__bar-container{
+width: 60%;
+}
+ /*==================== blog page ends ======================= */
+ 
+ /* sign in form */
+ .form__section-container{
+    padding: 3rem;
+ }
+
+
+ /* ==============DASHBOARFd=============== */
+ .dashboard__container{
+    grid-template-columns: 4.3rem auto;
+    padding: 0;
+    background: transparent;
+ }
+ .dashboard aside{
+    background: var(--color-primary);
+ }
+ .dashboard aside h5{
+   display: none;
+ }
+ .dashboard main table thead{
+    display: none;
+ }
+ .dashboard main table tr{
+    display: flex;
+    flex-direction: column;
+ }
+ .dashboard main table tr:nth-child(even){
+    background: var(--color-gray-900);
+ }
+ .dashboard main table tr:hover td{
+    background: transparent;
+ }
+ .sidebar__toggle{
+    display: none;
+ }
+ /* ==============DASHBOARFd=============== */
+
+
+
+
+
+}
+/* ================= RESPONSIVE media query tablet =================== */
+/* ================= RESPONSIVE media query medium devices ends=================== */
+
+/* bell starts  */
+.bell{
+    color: #C19A6B;
+    margin-left: 10px;
+}
+
+.count_back{
+    /* background: #34282C; */
+    background: #211305;
+    width: 40px;
+    height: 40px;
+    padding-top: 7px;
+  
+    margin-left: 200px;
+    color: yellowgreen;
+    margin-left: 200px;
+    text-align: center;
+    border-radius: 50%;
+   
+
+}
+/* bell ends */
+
