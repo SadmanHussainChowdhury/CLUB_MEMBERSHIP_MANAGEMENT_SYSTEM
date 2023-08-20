@@ -1,6 +1,4 @@
 <?php
-//require 'header_two.php';
-
 
 require 'header_one.php';
 require 'db.php';
