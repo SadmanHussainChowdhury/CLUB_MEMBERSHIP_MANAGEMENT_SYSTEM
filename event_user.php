@@ -11,32 +11,6 @@ $category_res = mysqli_query($db_connection,$category);
 
 ?>
 
-<!-- ========================= start of featured======================================== -->
-<!-- <section class="featured">
-    <div class="featured_container">
-        <div class="post__thumbnail">
-            <img src="./images/a2.jpg" alt="">
-        </div>
-        <div class="post__info">
-            <a href="" class="category__button">Science</a>
-            <h2 class="post__title"><a href="post.html">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt.</a></h2>
-            <p class="post__body">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum eligendi nam quasi eos corrupti! Tenetur voluptas, eligendi, placeat illum molestiae id ex vitae exercitationem blanditiis provident consectetur ipsa ab totam?
-            </p>
-            <div class="post__author">
-                <div class="post__author-avater">
-                    <img src="./images/a1.webp" alt="">
-                </div>
-                <div class="post__author-info">
-                    <h5>BY: SENKU</h5>
-                    <small>June 22,2022 -1:30</small>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-<!-- =========================End of featured======================================== -->
-<!-- =========================  POST starts  ======================================== -->
 
 <section class="posts" style="margin-top: 8rem;">
     <div class="container posts__container">
