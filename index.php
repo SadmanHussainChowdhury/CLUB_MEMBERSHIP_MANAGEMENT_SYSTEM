@@ -57,35 +57,23 @@ $social_res = mysqli_query($db_connection, $social);
 </head>
 
 <body>
+
     <!-- start of nav bar -->
     <nav>
         <div class="container nav__container">
             <!-- logo goes here -->
-            <a href="index.html" class="nav__logo"><img width="60px" height="60px" src="./uploads/logo/<?=$logo_after_assoc['logo']?>" alt=""></a>
-            <!-- <a href="index.html" class="nav__logo">Tasu</a> -->
+            <a href="index.php" class="nav__logo"><img width="60px" height="60px" src="./uploads/logo/18.png" alt=""></a>
+
 
             <!-- navs -->
             <ul class="nav__items">
-                <!-- <li><a href="blog.html"><b>EVENTS</b></a></li> -->
-                <li><a href="#about"><b>ABOUT</b></a></li>
+              <!--<li><a href="payment.php"><b>PAYMENT</b></a></li> -->
+                <li><a href="dd.php"><b>ABOUT</b></a></li>
                 <li><a href="#contact"><b>CONTACT</b></a></li>
                 <li><a href="login_form.php"><b>LOG IN</b></a></li>
-                <!-- <li class="nav__profile">
-                    <div class="avater">
-                        <img src="./images/a1.webp">
-                    </div>
 
-                    <ul>
-                        <li><a href="dashboard.html">DASHBOARD</a></li>
-                        <li><a href="logout.html">LOG OUT</a></li>
-                    </ul>
-
-
-                </li> -->
             </ul>
-            <!-- small screen -->
-            <!-- <button id="open__nav-btn"><i class="uil uil-bars"></i></button>
-            <button id="close__nav-btn"><i class="uil uil-multiply"></i></button> -->
+  
         </div>
     </nav>
     <!-- end of nav bar -->
@@ -95,9 +83,12 @@ $social_res = mysqli_query($db_connection, $social);
     <!-- banner starts  -->
     <div class="container" id="joinus">
         <div class="card">
+        <h1 style="text-align:center;">CLUB MEMBERSHIP MANAGEMENT SYSTEM</h1>
             <div class="card-h">
+           
                 <!-- <h1>"If everyone is moving forward together, then success takes care of itself." - Henry Ford</h1> -->
                 <h1><span class="auto-type"></span></h1>
+                
             </div>
 
         </div>
@@ -119,8 +110,14 @@ $social_res = mysqli_query($db_connection, $social);
         <div class="about" id="about">
 
             <div class="para">
-                <h2>Our Club</h2>
-                <p><?=$club_after_assoc['club']?></p>
+                <h2>Our Club Activities</h2>
+                <p>Build your team<br>
+                    Use the right tools<br>
+                    Map out your timeline<br>
+                    Know your audience<br>
+                    Set a clear goal<br>
+                    Plan your marketing strategy &<br>
+                    Show impact</p>
 
             </div>
 
@@ -171,9 +168,9 @@ $social_res = mysqli_query($db_connection, $social);
                 <div class="part-one">
                     <section class="contact" >
                         <h2>Contact us</h2>
-                        <h5>Address: <span><?=$about_after_assoc['address']?></span></h5>
-                        <h5>Email: <span><?=$about_after_assoc['email']?></span></h5>
-                        <h5>Phone: <span><?=$about_after_assoc['phone']?></span></h5>
+                        <h5>Address: <span>United International University, United City, Madani Ave, Dhaka 1212</span></h5>
+                        <h5>Email: <span>info@uiu.ac.bd</span></h5>
+                        <h5>Phone: <span>09604-848848</span></h5>
                     </section>
                     <article class="cat">
                         <h3>.......................................</h3>
@@ -212,7 +209,7 @@ $social_res = mysqli_query($db_connection, $social);
 
         </div>
         <div class="footer__copyright">
-            <small>Copyright &copy;2055 FAT</small>
+        <p>Copyright © 2023 CMMS. All rights reserved by CMMS</p>
         </div>
     </footer>
 
