@@ -1,14 +1,13 @@
 <?php
 //session_start();
-require 'header_one.php';
+
 require 'db.php';
 
 
 
 ?>
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
 <style>
 div.gallery {
   border: 1px solid #ccc;
@@ -57,10 +56,58 @@ div.desc {
   clear: both;
 }
 </style>
+<head>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&family=Montserrat+Subrayada:wght@400;700&family=Secular+One&family=Source+Code+Pro:wght@700&family=Zen+Dots&display=swap"
+        rel="stylesheet">
+ <!-- fonts ends -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLUB MEMBERSHIP MANAGEMENT SYSTEM</title>
+
+    
+    <!-- css link starts  -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- css link starts  -->
+
+
+    <!-- iconscout cdn link starts  -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- iconscout cdn linkends  -->
+
+    <!-- image slider swiper js starts   -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- image slider swiper js ends -->
 </head>
+
 <body>
-   
-<h1><br></h1>
+
+    <!-- start of nav bar -->
+    <nav>
+        <div class="container nav__container">
+            <!-- logo goes here -->
+            <a href="index.php" class="nav__logo"><img width="60px" height="60px" src="./uploads/logo/18.png" alt=""></a>
+
+
+            <!-- navs -->
+            <ul class="nav__items">
+              <!--<li><a href="payment.php"><b>PAYMENT</b></a></li> -->
+                <li><a href="about.php"><b>ABOUT</b></a></li>
+               
+                <li><a href="login_form.php"><b>LOG IN</b></a></li>
+
+            </ul>
+  
+        </div>
+    </nav>
+    <!-- end of nav bar -->
+
+    
+    <h1><br></h1>
 <h2>Our Committee Members</h2>
 
 <h4>Our membership team is there to help bring members together for meets and events. 
@@ -116,6 +163,18 @@ div.desc {
 
 
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+   
+
 
 
