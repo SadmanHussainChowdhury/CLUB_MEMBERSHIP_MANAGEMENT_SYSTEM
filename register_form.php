@@ -113,7 +113,7 @@ session_start();
             <!-- user type ends-->
 
             <input type="submit" name="submit" value="register now" class="form-btn">
-            <p>already have an account? <a href="login_form.php">Login now</a></p>
+            <p>Already have an account? <a href="login_form.php">Login now</a></p>
             <?php 
             if(isset($_SESSION['success'])){
             ?>
