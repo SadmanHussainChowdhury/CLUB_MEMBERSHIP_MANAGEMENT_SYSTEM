@@ -13,26 +13,10 @@ $social_res = mysqli_query($db_connection, $social);
     </div>
     <div class="container footer__container">
 
-        <!-- <article>
-            <h4>categories</h4>
-            <ul>
-                <li><a href="">Science</a></li>
-                <li><a href="">Science</a></li>
-                <li><a href="">Science</a></li>
-            </ul>
-        </article>
 
-         <article>
-            <h4>Permalink</h4>
-            <ul>
-                <li><a href="">blog</a></li>
-                <li><a href="">services</a></li>
-                <li><a href="">Science</a></li>
-            </ul>
-        </article> -->
     </div>
     <div class="footer__copyright">
-        <small>Copyright &copy;2022 FAHMIDA ALAM TASMIM</small>
+    <p>Copyright © 2023 CMMS. All rights reserved by CMMS</p>
     </div>
 </footer>
 
