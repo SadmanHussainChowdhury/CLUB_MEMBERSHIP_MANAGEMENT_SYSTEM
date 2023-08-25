@@ -45,7 +45,7 @@ session_start();
 
 
             <input type="submit" name="submit" value="login now" class="form-btn">
-            <p>don't have an account? <a href="register_form.php">Register now</a></p>
+             <p>Don't have an account? <a href="pay_info.php">Register now</a></p>
 
 
             
